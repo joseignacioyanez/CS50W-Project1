@@ -4,6 +4,12 @@
     {{ entryName }}
 {% endblock %}
 
+{% block nav %}
+    <div>
+        <a href="{% url 'editPage' entryName=entryName %}">Edit this Page</a>
+    </div>
+{% endblock %}
+
 {% block body %}
 
     {{ entryHTML|safe }}
